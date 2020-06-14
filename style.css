@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Playfair Display", serif;
+}
+div.container {
+  min-height: 100vh;
+  width: 100vw;
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgb(15, 32, 39),
+    rgb(32, 58, 67),
+    rgb(44, 83, 100)
+  );
+}
+div.navBar {
+  padding: 15px 45px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.myName span {
+  font-family: "Metal Mania", cursive;
+  font-size: 25px;
+}
+input[type="text"]#search {
+  width: 70px;
+  padding: 7px 12px;
+  font-size: 13px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: width 0.4s ease;
+}
+input[type="text"]#search:focus {
+  width: 300px;
+  outline: none;
+}
+#searchBtn {
+  padding: 2px 12px;
+  font-size: 18px;
+  border: 0.5px solid black;
+  border-radius: 6px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+.addNoteCard {
+  padding-left: 40px;
+  line-height: 1.6;
+  width: 60%;
+  margin: auto;
+}
+textarea {
+  display: block;
+  width: 100%;
+  border: 0.5px solid black;
+  padding: 5px 15px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+textarea:focus {
+  outline: none;
+}
+input[type="text"]#title {
+  width: 10%;
+  padding: 6px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 0.5px solid black;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: width 0.6s ease;
+}
+input[type="text"]#title:focus {
+  width: 20%;
+  outline: none;
+}
+button#addNote {
+  padding: 6px 12px;
+  /* background-color: #2d6cdf; */
+  background: linear-gradient(
+    to right,
+    rgb(15, 32, 39),
+    rgb(32, 58, 67),
+    rgb(44, 83, 100)
+  );
+  color: white;
+  margin-top: 25px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  font-size: 20px;
+}
+button.deleteBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 25%;
+  padding: 6px 12px;
+  background: linear-gradient(
+    to right,
+    rgb(15, 32, 39),
+    rgb(32, 58, 67),
+    rgb(44, 83, 100)
+  );
+  color: white;
+  margin-top: 5px;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  font-size: 20px;
+  display: block;
+  width: 137px;
+  margin: 5px auto;
+}
+div.yourNotes {
+  padding-left: 40px;
+  width: 88%;
+  margin: auto;
+}
+#gridContainer {
+  display: grid;
+  margin-top: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(286px, 1fr));
+  grid-auto-rows: 286px;
+  grid-row-gap: 10px;
+}
+div.noteCard {
+  position: relative;
+  border: 0.5px solid grey;
+  width: 286px;
+  height: auto;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+.heading {
+  color: white;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right,
+    rgb(15, 32, 39),
+    rgb(32, 58, 67),
+    rgb(44, 83, 100)
+  );
+  padding: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content {
+  padding: 8px;
+}
