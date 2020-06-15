@@ -33,7 +33,7 @@ addNoteBtn.addEventListener('click', function (e) {
 
 
     else {
-        console.log('Empty Note!');
+        alert('You must write something to add');
     }
 })
 

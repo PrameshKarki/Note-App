@@ -20,6 +20,10 @@ div.container {
     rgb(44, 83, 100)
   );
 }
+.myName a {
+  text-decoration: none;
+  color: white;
+}
 div.navBar {
   padding: 15px 45px;
   display: flex;
@@ -55,14 +59,17 @@ input[type="text"]#search:focus {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
 }
+#searchBtn:active {
+  transform: translateY(3px);
+}
 h1 {
   text-align: center;
 }
 .addNoteCard {
   padding-left: 40px;
-  line-height: 1.6;
+  line-height: 2;
   width: 60%;
-  margin: auto;
+  margin: 5px auto;
 }
 textarea {
   display: block;
@@ -77,6 +84,7 @@ textarea:focus {
   outline: none;
 }
 input[type="text"]#title {
+  display: block;
   width: 10%;
   padding: 6px 12px;
   font-size: 15px;
@@ -92,7 +100,6 @@ input[type="text"]#title:focus {
 }
 button#addNote {
   padding: 6px 12px;
-  /* background-color: #2d6cdf; */
   background: linear-gradient(
     to right,
     rgb(15, 32, 39),
@@ -105,6 +112,9 @@ button#addNote {
   border-radius: 15px;
   outline: none;
   font-size: 20px;
+}
+button:active {
+  transform: translateY(3px);
 }
 button.deleteBtn {
   position: absolute;
@@ -162,4 +172,29 @@ div.noteCard {
 }
 .content {
   padding: 8px;
+}
+@media screen and (max-width: 1000px) {
+  .addNoteCard {
+    margin: 5px 0px;
+  }
+  input[type="text"]#title {
+    width: 50%;
+  }
+  input[type="text"]#title:focus {
+    width: 100%;
+  }
+  input[type="text"]#search:focus {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 410px) {
+  h1 {
+    font-size: 24px;
+  }
+  input[type="text"]#search:focus {
+    width: auto;
+  }
+  .gridContainer {
+    justify-content: space-between;
+  }
 }
